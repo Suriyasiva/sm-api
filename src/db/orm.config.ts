@@ -5,19 +5,13 @@ dotenv.config();
 const entityLocation = resolve(__dirname, '../entities/public/*{.ts,.js}');
 const migrations = resolve(__dirname, '../db/migrations/public/*{.ts,.js}');
 
-const host = 'db.pquyqtznsrxulgqlmilu.supabase.co';
-const dbPort = 5432;
-const dbUser = 'postgres';
-const dbPassword = '0PVuZUNmKdLTQIqT';
-const dbName = 'postgres';
-
 export const ormConfig: any = {
-  type: 'postgres',
-  host: host,
-  port: dbPort,
-  username: dbUser,
-  password: dbPassword,
-  database: dbName,
+ type: 'postgres',
+  host: process.env.DB_HOST,
+  port: +process.env.DB_PORT!,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 
   entities: [entityLocation],
   migrations: [migrations],
