@@ -1,0 +1,33 @@
+POST - http://localhost:5143/v1/users/create
+BODY - 
+{
+    "firstName": "suriya",
+    "lastName": "s",
+    "email": "suriya@yopmail.com",
+    "password": "123@asAS",
+    "organizationName": "Suriya Organization",
+    "domain": "localhost"
+}
+
+------
+
+POST - http://localhost:5143/v1/tenant/customers/create
+HEADERS - x-tenant-id - suriya_organization
+BODY - 
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "password": "hashed_password_1"
+} 
+
+------
+
+POST - http://localhost:5143/v1/tenant/subscriptions/downgrade
+BODY - 
+{
+    "newPlan": "MONTHLY",
+    "newSubscriptionStatus": "UPGRADED"
+}
+
+
