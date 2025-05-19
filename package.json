@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' sm-app.ts",
+    "start": "node dist/sm-app.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/sm-app.ts",
     "build": "tsc",
     "lint": "eslint 'src/**/*.ts'",
     "test": "echo \"Error: no test specified\" && exit 1",

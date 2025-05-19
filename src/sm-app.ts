@@ -1,5 +1,5 @@
 import env from 'dotenv';
-import server from './src/server';
+import server from './server';
 
 env.config();
 
