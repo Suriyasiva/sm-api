@@ -44,7 +44,7 @@ Listening...
   });
 
   app.use(helmet());
-  // app.use(limiter);
+  app.use(limiter);
 
   app.use('/v1', router);
 
