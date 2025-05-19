@@ -26,7 +26,12 @@ STARTED AT: ${new Date()}
 Listening...
 =======\n`;
 
-  app.use(cors());
+  app.use(
+    cors({
+      origin: '*',
+    }),
+  );
+
   app.use(express.json());
   app.use(passport.initialize());
   app.use(tenantMiddleware);
